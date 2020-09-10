@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from '../todo.service';
 import { Observable } from 'rxjs';
 import { Todo } from '../models/todo';
 
@@ -17,22 +16,15 @@ export class TodolistComponent implements OnInit {
 
   newTodoInput = '';
 
-  constructor(private todoService: TodoService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.todoService.getAllTodos().subscribe(dataFromBackend => {
-      this.todos = dataFromBackend;
-    });
-
-    // or
-
-    this.todos$ = this.todoService.getAllTodos();
+    
   }
 
-  addTodo(todo: Todo) {
-    this.todoService.addTodo(todo).subscribe(data => {
-      this.todos.push(data);
-    })
+  addTodo() {
+      const todo = new Todo(this.newTodoInput);
+      this.todos.push(todo);
   }
 
 }

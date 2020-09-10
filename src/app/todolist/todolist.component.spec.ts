@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed, fakeAsync } from '@angular/core/testi
 import { FormsModule } from '@angular/forms';
 import { TodolistComponent } from './todolist.component';
 import { By } from '@angular/platform-browser';
+import { Todo } from '../models/todo';
 
 describe('TodolistComponent', () => {
   let component: TodolistComponent;
@@ -36,8 +37,8 @@ describe('TodolistComponent', () => {
   describe('todos', () => {
     it('should display the todo title for every todo', () => {
       component.todos = [
-        { title: "First Todo" },
-        { title: "Second Todo" }
+       new Todo("First Todo"),
+       new Todo("Second Todo")
       ];
 
       fixture.detectChanges();
@@ -91,7 +92,7 @@ describe('TodolistComponent', () => {
         input.nativeElement.dispatchEvent(new Event('input'));
         const button = fixture.debugElement.query(By.css('.add-todo-button')).nativeElement;
         button.click();
-        expect(component.todos.length).toEqual(3);
+        expect(component.todos.length).toEqual(1);
       })
     }));
   });

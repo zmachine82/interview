@@ -80,6 +80,17 @@ describe('TodolistComponent', () => {
   //     fixture.detectChanges();
   //     expect(todos[0].classes.strike).toBeTruthy();
   //   });
+  //
+  //   it('should change complete status when clicking on title', () => {
+  //     component.todos = [
+  //       { title: 'Second Todo', complete: true }
+  //     ];
+  //     fixture.detectChanges();
+  //     const todos = fixture.debugElement.queryAll(By.css('.todo'));
+  //     todos[0].nativeElement.click();
+  //     fixture.detectChanges();
+  //     expect(todos[0].classes.strike).toBeFalsy();
+  //   });
   // });
   //
   // describe('add todos', () => {

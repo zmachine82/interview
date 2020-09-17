@@ -32,67 +32,78 @@ describe('TodolistComponent', () => {
   //     expect(title.innerText.trim()).toEqual('My Todos');
   //   });
   // });
-
+  //
   // describe('todos', () => {
   //   it('should display the todo title for every todo', () => {
   //     component.todos = [
-  //       { title: "First Todo" },
-  //       { title: "Second Todo" }
+  //       { title: 'First Todo' },
+  //       { title: 'Second Todo' }
   //     ];
-
+  //
   //     fixture.detectChanges();
-
-  //     const todos = fixture.debugElement.queryAll(By.css(".todo"));
-  //     expect(todos[0].nativeElement.innerText.trim()).toEqual('First Todo')
-  //     expect(todos[1].nativeElement.innerText.trim()).toEqual('Second Todo')
+  //
+  //     let todos = fixture.debugElement.queryAll(By.css('.todo'));
+  //     expect(todos[0].nativeElement.innerText.trim()).toEqual('First Todo');
+  //     expect(todos[1].nativeElement.innerText.trim()).toEqual('Second Todo');
+  //
+  //     component.todos = [
+  //       { title: 'Third Todo' },
+  //       { title: 'Fourth Todo' }
+  //     ];
+  //
+  //     fixture.detectChanges();
+  //
+  //     todos = fixture.debugElement.queryAll(By.css('.todo'));
+  //     expect(todos[0].nativeElement.innerText.trim()).toEqual('Third Todo');
+  //     expect(todos[1].nativeElement.innerText.trim()).toEqual('Fourth Todo');
   //   });
-
+  //
   //   it('should have a strikethrough when complete', () => {
   //     component.todos = [
-  //       { title: "First Todo", complete: true },
-  //       { title: "Second Todo", complete: false }
+  //       { title: 'First Todo', complete: true },
+  //       { title: 'Second Todo', complete: false }
   //     ];
   //     fixture.detectChanges();
-  //     const todos = fixture.debugElement.queryAll(By.css(".todo"));
-
-  //     expect(todos[0].classes['strike']).toBeTruthy();
-  //     expect(todos[1].classes['strike']).toBeFalsy();
+  //     const todos = fixture.debugElement.queryAll(By.css('.todo'));
+  //
+  //     expect(todos[0].classes.strike).toBeTruthy();
+  //     expect(todos[1].classes.strike).toBeFalsy();
   //   });
-
+  //
   //   it('should change complete status when clicking on title', () => {
   //     component.todos = [
-  //       { title: "Second Todo", complete: false }
+  //       { title: 'Second Todo', complete: false }
   //     ];
   //     fixture.detectChanges();
-  //     const todos = fixture.debugElement.queryAll(By.css(".todo"));
+  //     const todos = fixture.debugElement.queryAll(By.css('.todo'));
   //     todos[0].nativeElement.click();
   //     fixture.detectChanges();
-  //     expect(todos[0].classes['strike']).toBeTruthy();
+  //     expect(todos[0].classes.strike).toBeTruthy();
   //   });
   // });
-
+  //
   // describe('add todos', () => {
   //   it('should have an input to add in a new todo', () => {
   //     const input = fixture.debugElement.query(By.css('.new-todo-input'));
   //     expect(input).toBeTruthy();
   //   });
-
+  //
   //   it('should have an add todo button', () => {
   //     const button = fixture.debugElement.query(By.css('.add-todo-button'));
   //     expect(button.nativeElement.innerText.trim()).toEqual('Add Todo');
   //   });
-
+  //
   //   it('should add a new todo to the list with the input value when clicking add todo button', async(() => {
-
+  //     component.todos = [];
   //     fixture.detectChanges();
   //     fixture.whenStable().then(() => {
   //       const input = fixture.debugElement.query(By.css('.new-todo-input'));
-  //       input.nativeElement.value = "get good";
+  //       input.nativeElement.value = 'get good';
   //       input.nativeElement.dispatchEvent(new Event('input'));
   //       const button = fixture.debugElement.query(By.css('.add-todo-button')).nativeElement;
   //       button.click();
-  //       expect(component.todos.length).toEqual(3);
-  //     })
+  //       expect(component.todos.length).toEqual(1);
+  //     });
   //   }));
   // });
 

@@ -19,7 +19,7 @@ export class TodolistComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
   addTodo() {
